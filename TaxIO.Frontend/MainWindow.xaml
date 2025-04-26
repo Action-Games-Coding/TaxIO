@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaxIO.Frontend"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" ResizeMode="NoResize"
+        Title="MainWindow" Height="960" Width="1080">
+    
+    <Grid Background="{DynamicResource BackgroundBrushDark}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0">
+
+            <!-- Položky menu -->
+            <ToggleButton Margin="0,0,80,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True"/>
+            <ToggleButton Margin="0,0,80,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="0,0,80,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="0,0,80,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="0,0,80,0" Content="📈 Grafy" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="0,0,80,0" Content="🔎 Kontrola" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="0,0,80,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" />
+
+        </StackPanel>
     </Grid>
 </Window>
