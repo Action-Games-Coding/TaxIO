@@ -13,10 +13,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Background="{DynamicResource BackgroundBrushDark2}">
 
             <!-- Položky menu -->
-            <ToggleButton Margin="0,0,80,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True"/>
+            <ToggleButton Margin="10,0,80,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True"/>
             <ToggleButton Margin="0,0,80,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" />
             <ToggleButton Margin="0,0,80,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" />
             <ToggleButton Margin="0,0,80,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" />
@@ -25,5 +25,7 @@
             <ToggleButton Margin="0,0,80,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" />
 
         </StackPanel>
+
+        <Page x:Name="MainPage" Grid.Row="1" Background="{DynamicResource BackgroundBrushDark}"/>
     </Grid>
 </Window>
