@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxIO.Core", "TaxIO.Core\TaxIO.Core.csproj", "{0014BD85-51FB-4FEC-8F90-E239B528F633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxIO.Frontend", "TaxIO.Frontend\TaxIO.Frontend.csproj", "{FC967588-BF3A-4D78-A61E-2BB2EB42D889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxIO.Database", "TaxIO.Database\TaxIO.Database.csproj", "{0687A53E-E10C-4DAF-9DA6-BE4E1093D5AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0014BD85-51FB-4FEC-8F90-E239B528F633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0014BD85-51FB-4FEC-8F90-E239B528F633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0014BD85-51FB-4FEC-8F90-E239B528F633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC967588-BF3A-4D78-A61E-2BB2EB42D889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC967588-BF3A-4D78-A61E-2BB2EB42D889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC967588-BF3A-4D78-A61E-2BB2EB42D889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC967588-BF3A-4D78-A61E-2BB2EB42D889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0687A53E-E10C-4DAF-9DA6-BE4E1093D5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0687A53E-E10C-4DAF-9DA6-BE4E1093D5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0687A53E-E10C-4DAF-9DA6-BE4E1093D5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0687A53E-E10C-4DAF-9DA6-BE4E1093D5AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
