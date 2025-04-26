@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Hlavní barvy -->
+    <Color x:Key="PrimaryColor">#FF007300</Color>
+    <!-- Výchozí modrá -->
+    <Color x:Key="BackgroundColorLight">#FFF5F5F5</Color>
+    <Color x:Key="BackgroundColorDark">#FF1E1E1E</Color>
+    <Color x:Key="ForegroundColorLight">#FF000000</Color>
+    <Color x:Key="ForegroundColorDark">#FFFFFFFF</Color>
+
+    <!-- Brush pro binding -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="BackgroundBrushLight" Color="{StaticResource BackgroundColorLight}" />
+    <SolidColorBrush x:Key="BackgroundBrushDark" Color="{StaticResource BackgroundColorDark}" />
+    <SolidColorBrush x:Key="ForegroundBrushLight" Color="{StaticResource ForegroundColorLight}" />
+    <SolidColorBrush x:Key="ForegroundBrushDark" Color="{StaticResource ForegroundColorDark}" />
+</ResourceDictionary>

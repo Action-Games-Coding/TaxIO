@@ -5,5 +5,12 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/TaxIO.Frontend;component/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TaxIO.Frontend;component/Styly/NavButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
