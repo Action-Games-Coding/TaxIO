@@ -26,6 +26,7 @@ namespace TaxIO.Frontend.Pages
             InitializeComponent();
 
             PieChart01.SetData(Getters.GetCategoryValuesData());
+            LineChart01.LoadData(Getters.GetDateFullWorth());
         }
     }
 }

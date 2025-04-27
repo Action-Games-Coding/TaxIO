@@ -21,5 +21,20 @@ namespace TaxIO.Core
             return data;
         }
 
+        public static Dictionary<DateTime, double> GetDateFullWorth()
+        {
+            // Simulovaná data pro graf
+            Dictionary<DateTime, double> data = new(){
+                { new DateTime(2023, 1, 1), 100 },
+                { new DateTime(2023, 2, 1), 200 },
+                { new DateTime(2023, 3, 1), 500 },
+                { new DateTime(2023, 4, 1), 400 },
+                { new DateTime(2023, 5, 1), 100 },
+                { new DateTime(2023, 6, 1), 500 },
+                { new DateTime(2023, 7, 1), 700 },
+            };
+
+            return data;
+        }
     }
 }
