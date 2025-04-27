@@ -23,6 +23,7 @@ namespace TaxIO.Frontend.UserControls
         public PieChart01()
         {
             InitializeComponent();
+            _data = [];
         }
 
         public void SetData(Dictionary<string, double> data)
@@ -35,13 +36,13 @@ namespace TaxIO.Frontend.UserControls
                 total += item.Value;
 
             double angle = 0;
-            Random random = new Random();
+            Random random = new();
 
             foreach (var item in data)
             {
                 double sweep = item.Value / total * 360;
 
-                Path path = CreatePieSlice(angle, sweep, 150, 150, 150);
+                Path path = CreatePieSlice(angle, sweep, 0,  0, 100);
                 path.Fill = new SolidColorBrush(Color.FromRgb(
                     (byte)random.Next(100, 256),
                     (byte)random.Next(100, 256),
@@ -54,6 +55,8 @@ namespace TaxIO.Frontend.UserControls
                 ChartCanvas.Children.Add(path);
                 angle += sweep;
             }
+
+            LegendText.Text = _data.Values.Sum().ToString();
         }
 
         private void PieSlice_MouseEnter(object sender, MouseEventArgs e)
@@ -62,18 +65,19 @@ namespace TaxIO.Frontend.UserControls
             if (path != null)
             {
                 string itemName = path.Tag.ToString();
-                LegendText.Text = itemName;  // zobrazíme název položky v legendě
+                string itemValue = _data[itemName].ToString();
+                LegendText.Text = $"{itemName}\n{itemValue}";  // zobrazíme název položky v legendě
             }
         }
 
         private void PieSlice_MouseLeave(object sender, MouseEventArgs e)
         {
-            LegendText.Text = "Legenda";  // resetujeme text v legendě
+            LegendText.Text = _data.Values.Sum().ToString();  // resetujeme text v legendě
         }
 
         private void ChartCanvas_MouseLeave(object sender, MouseEventArgs e)
         {
-            LegendText.Text = "Legenda";  // pokud myš opustí celý graf, resetujeme text
+            LegendText.Text = _data.Values.Sum().ToString();  // pokud myš opustí celý graf, resetujeme text
         }
 
         private Path CreatePieSlice(double startAngle, double sweepAngle, double centerX, double centerY, double radius)
