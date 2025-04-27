@@ -4,29 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaxIO.Frontend"
-        mc:Ignorable="d" ResizeMode="NoResize"
+        mc:Ignorable="d" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        MinHeight="960" MinWidth="1080"
         Title="MainWindow" Height="960" Width="1080">
     
-    <Grid Background="{DynamicResource BackgroundBrushDark}">
+    <Grid Background="{DynamicResource BackgroundBrushDark}" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Background="{DynamicResource BackgroundBrushDark2}">
 
             <!-- Položky menu -->
-            <ToggleButton Margin="20,0,70,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Dashboard"/>
-            <ToggleButton Margin="0,0,70,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Income"/>
-            <ToggleButton Margin="0,0,70,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Expense"/>
-            <ToggleButton Margin="0,0,70,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Inventory"/>
-            <ToggleButton Margin="0,0,70,0" Content="📈 Grafy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Charts"/>
-            <ToggleButton Margin="0,0,70,0" Content="🔎 Kontrola" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Check"/>
-            <ToggleButton Margin="0,0,70,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Settings"/>
+            <RadioButton GroupName="Navigation" Margin="20,0,70,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Dashboard"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Income"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Expense"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Inventory"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="📈 Grafy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Charts"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="🔎 Kontrola" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Check"/>
+            <RadioButton GroupName="Navigation" Margin="0,0,70,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Settings"/>
 
         </StackPanel>
 
-        <Frame x:Name="MainPage" Grid.Row="1" NavigationUIVisibility="Hidden" Content="Dashboard"/>
+        <Frame Margin="0" x:Name="MainPage" Grid.Row="1" NavigationUIVisibility="Hidden" Content="Dashboard" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </Window>
