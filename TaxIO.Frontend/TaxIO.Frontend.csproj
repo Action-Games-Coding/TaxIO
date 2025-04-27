@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaxIO.Core\TaxIO.Core.csproj" />
+	  <ProjectReference Include="..\TaxIO.Core\TaxIO.Core.csproj" />
   </ItemGroup>
 
 </Project>

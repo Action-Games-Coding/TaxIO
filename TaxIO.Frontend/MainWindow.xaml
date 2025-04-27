@@ -16,16 +16,17 @@
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Background="{DynamicResource BackgroundBrushDark2}">
 
             <!-- Položky menu -->
-            <ToggleButton Margin="10,0,80,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True"/>
-            <ToggleButton Margin="0,0,80,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" />
-            <ToggleButton Margin="0,0,80,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" />
-            <ToggleButton Margin="0,0,80,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" />
-            <ToggleButton Margin="0,0,80,0" Content="📈 Grafy" Style="{DynamicResource NavButtonStyle}" />
-            <ToggleButton Margin="0,0,80,0" Content="🔎 Kontrola" Style="{DynamicResource NavButtonStyle}" />
-            <ToggleButton Margin="0,0,80,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" />
+            <ToggleButton Margin="20,0,70,0" Content="📊 Dashboard" Style="{DynamicResource NavButtonStyle}" IsChecked="True" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Dashboard"/>
+            <ToggleButton Margin="0,0,70,0" Content="📥 Příjmy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Income"/>
+            <ToggleButton Margin="0,0,70,0" Content="📤 Výdaje" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Expense"/>
+            <ToggleButton Margin="0,0,70,0" Content="🔄 Inventář" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Inventory"/>
+            <ToggleButton Margin="0,0,70,0" Content="📈 Grafy" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Charts"/>
+            <ToggleButton Margin="0,0,70,0" Content="🔎 Kontrola" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Check"/>
+            <ToggleButton Margin="0,0,70,0" Content="⚙️ Nastavení" Style="{DynamicResource NavButtonStyle}" Cursor="Hand" Checked="ToggleButton_Checked" Tag="Settings"/>
 
         </StackPanel>
 
-        <Page x:Name="MainPage" Grid.Row="1" Background="{DynamicResource BackgroundBrushDark}"/>
+        <Frame x:Name="MainPage" Grid.Row="1" NavigationUIVisibility="Hidden" Content="Dashboard"/>
+
     </Grid>
 </Window>
