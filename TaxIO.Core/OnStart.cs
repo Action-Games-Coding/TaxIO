@@ -9,6 +9,11 @@ namespace TaxIO.Core
 {
     public class OnStart
     {
+        public static void Start()
+        {
+            //InitializeDatabase();
+        }
+
         public static void InitializeDatabase()
         {
             TaxIODbContext db = new TaxIODbContext();
