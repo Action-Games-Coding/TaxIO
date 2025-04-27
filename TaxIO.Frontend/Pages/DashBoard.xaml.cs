@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaxIO.Core;
 
 namespace TaxIO.Frontend.Pages
 {
@@ -24,12 +25,7 @@ namespace TaxIO.Frontend.Pages
         {
             InitializeComponent();
 
-            PieChart01.SetData(new Dictionary<string, double>
-            {
-                { "Item 1", 30 },
-                { "Item 2", 20 },
-                { "Item 3", 50 }
-            });
+            PieChart01.SetData(Getters.GetCategoryValuesData());
         }
     }
 }

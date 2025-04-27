@@ -10,11 +10,21 @@
         <Canvas x:Name="ChartCanvas" MouseLeave="ChartCanvas_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Border Width="150" Height="150" Background="{DynamicResource BackgroundBrushDark}" CornerRadius="150" 
                 VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock x:Name="LegendText"
-                       Text="Legenda" FontSize="25"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       TextAlignment="Center"
-                       FontWeight="Bold"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="LegendTextLine1"
+                           FontSize="25"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           TextAlignment="Center" MaxWidth="125" TextWrapping="Wrap"
+                           FontWeight="Bold"/>
+
+                <TextBlock x:Name="LegendTextLine2"
+                           FontSize="25"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           TextAlignment="Center" MaxWidth="125" TextWrapping="Wrap"
+                           FontWeight="Bold"/>
+            </StackPanel>
+            
+
         </Border>
     </Grid>
 </UserControl>

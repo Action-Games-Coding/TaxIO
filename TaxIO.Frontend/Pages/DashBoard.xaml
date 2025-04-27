@@ -10,25 +10,26 @@
       Title="DashBoard">
     <Grid Margin="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="500"/>
         </Grid.ColumnDefinitions>
 
-        <controls:PieChart01 x:Name="PieChart01" Margin="50,50,0,80"/>
+        <controls:PieChart01 x:Name="PieChart01" Width="360" Grid.Column="0" Grid.Row="0"/>
 
         <Border Grid.Row="0" Grid.Column="2"
             Width="550" Height="230"
-            Margin="200,50,50,80"
+            Margin="0,50,0,0"
             BorderBrush="LightGray" BorderThickness="1">
             <TextBlock Text="Čárový graf" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
 
-        <Border Grid.Row="1" Grid.ColumnSpan="3"
+        <Border Grid.Row="2" Grid.ColumnSpan="3"
             Margin="50,0,50,50"
             BorderBrush="LightGray" BorderThickness="1">
             <StackPanel>

@@ -56,7 +56,9 @@ namespace TaxIO.Frontend.UserControls
                 angle += sweep;
             }
 
-            LegendText.Text = _data.Values.Sum().ToString();
+            LegendTextLine1.Text = _data.Values.Sum().ToString();
+            LegendTextLine1.Visibility = Visibility.Visible;  // zobrazíme první řádek legendy
+            LegendTextLine2.Visibility = Visibility.Collapsed;  // skryjeme druhý řádek legendy
         }
 
         private void PieSlice_MouseEnter(object sender, MouseEventArgs e)
@@ -66,18 +68,26 @@ namespace TaxIO.Frontend.UserControls
             {
                 string itemName = path.Tag.ToString();
                 string itemValue = _data[itemName].ToString();
-                LegendText.Text = $"{itemName}\n{itemValue}";  // zobrazíme název položky v legendě
+
+                LegendTextLine1.Text = itemName;  // zobrazíme název položky
+                LegendTextLine2.Text = itemValue;  // zobrazíme hodnotu položky
+                LegendTextLine2.Visibility = Visibility.Visible;  // zobrazíme druhý řádek legendy
+                LegendTextLine1.Visibility = Visibility.Visible;  // zajistíme, že první řádek je také viditelný
             }
         }
 
         private void PieSlice_MouseLeave(object sender, MouseEventArgs e)
         {
-            LegendText.Text = _data.Values.Sum().ToString();  // resetujeme text v legendě
+            LegendTextLine1.Text = _data.Values.Sum().ToString();  // resetujeme text v legendě
+            LegendTextLine1.Visibility = Visibility.Visible;  // zajistíme, že první řádek je viditelný
+            LegendTextLine2.Visibility = Visibility.Collapsed;  // skryjeme druhý řádek legendy
         }
 
         private void ChartCanvas_MouseLeave(object sender, MouseEventArgs e)
         {
-            LegendText.Text = _data.Values.Sum().ToString();  // pokud myš opustí celý graf, resetujeme text
+            LegendTextLine1.Text = _data.Values.Sum().ToString();  // pokud myš opustí celý graf, resetujeme text
+            LegendTextLine1.Visibility = Visibility.Visible;  // zajistíme, že první řádek je viditelný
+            LegendTextLine2.Visibility = Visibility.Collapsed;  // skryjeme druhý řádek legendy
         }
 
         private Path CreatePieSlice(double startAngle, double sweepAngle, double centerX, double centerY, double radius)
