@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaxIO.Frontend"
         mc:Ignorable="d" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
-        MinHeight="960" MinWidth="1080"
+        
         Title="MainWindow" Height="960" Width="1080">
     
     <Grid Background="{DynamicResource BackgroundBrushDark}" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

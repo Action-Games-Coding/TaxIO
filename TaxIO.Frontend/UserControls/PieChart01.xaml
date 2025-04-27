@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="TaxIO.Frontend.UserControls.PieChart01"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaxIO.Frontend.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="228" d:DesignWidth="228">
+    <Grid>
+        <Canvas x:Name="ChartCanvas" MouseLeave="ChartCanvas_MouseLeave" />
+        <Border Width="228" Height="228" Background="White" CornerRadius="150" 
+                VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="LegendText"
+                       Text="Legenda"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       FontWeight="Bold"/>
+        </Border>
+    </Grid>
+</UserControl>

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TaxIO.Frontend.Pages"
+      xmlns:controls="clr-namespace:TaxIO.Frontend.UserControls"
       mc:Ignorable="d" HorizontalAlignment="Left" VerticalAlignment="Center"
       d:DesignHeight="900" d:DesignWidth="1080"
       Title="DashBoard">
@@ -18,12 +19,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="0" Grid.Column="0"
-            Width="230" Height="230"
-            Margin="50,50,0,80"
-            BorderBrush="LightGray" BorderThickness="1">
-            <TextBlock Text="Kruhový graf" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
+        <controls:PieChart01 x:Name="PieChart01" Margin="50,50,0,80"/>
 
         <Border Grid.Row="0" Grid.Column="2"
             Width="550" Height="230"

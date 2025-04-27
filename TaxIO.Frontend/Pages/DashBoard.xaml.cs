@@ -23,6 +23,13 @@ namespace TaxIO.Frontend.Pages
         public DashBoard()
         {
             InitializeComponent();
+
+            PieChart01.SetData(new Dictionary<string, double>
+            {
+                { "Item 1", 30 },
+                { "Item 2", 20 },
+                { "Item 3", 50 }
+            });
         }
     }
 }
