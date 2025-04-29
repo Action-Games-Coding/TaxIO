@@ -24,7 +24,8 @@ namespace TaxIO.Core
         public static Dictionary<DateTime, double> GetDateFullWorth()
         {
             // Simulovaná data pro graf
-            Dictionary<DateTime, double> data = new(){
+            Dictionary<DateTime, double> data = new()
+            {
                 { new DateTime(2023, 1, 1), 100 },
                 { new DateTime(2023, 2, 1), 200 },
                 { new DateTime(2023, 3, 1), 500 },

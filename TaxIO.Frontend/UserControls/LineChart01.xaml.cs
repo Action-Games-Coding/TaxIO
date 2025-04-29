@@ -1,52 +1,54 @@
-﻿using OxyPlot.Axes;
-using OxyPlot.Series;
-using OxyPlot;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
-using System.Windows;
+using System.Linq;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Shapes;
+using TaxIO.Core;
 
 namespace TaxIO.Frontend.UserControls
 {
-    /// <summary>
-    /// Interakční logika pro LineChart01.xaml
-    /// </summary>
     public partial class LineChart01 : UserControl
     {
+        public SeriesCollection SeriesCollection { get; set; }
+        public List<string> Labels { get; set; }
+        public Func<double, string> YFormatter { get; set; }
+
         public LineChart01()
         {
             InitializeComponent();
-            DataContext = this; // Nastavení DataContext pro binding
+            DataContext = this;
         }
-
-        // Property pro data
-        public Dictionary<DateTime, double> Data { get; set; }
-
-        // Property pro vykreslení grafu
-        public PlotModel LinePlotModel { get; private set; }
 
         public void LoadData(Dictionary<DateTime, double> data)
         {
-            Data = data;
+            var values = data.Values.ToArray();
+            var labels = data.Keys.ToList();
 
-            var plotModel = new PlotModel { Title = "Vývoj hodnoty" };
-            var lineSeries = new LineSeries
+            SeriesCollection = new SeriesCollection
             {
-                Title = "Data",
-                MarkerType = MarkerType.Circle,
-                MarkerSize = 4
+                new LineSeries
+                {
+                    Title = "",
+                    Values = new ChartValues<double>(values),
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 10
+                }
             };
 
-            foreach (var entry in data)
+            List<string> labelsstr = [];
+
+            foreach (var label in labels)
             {
-                lineSeries.Points.Add(new DataPoint(DateTimeAxis.ToDouble(entry.Key), entry.Value));
+                labelsstr.Add(label.ToString("dd.MM.yyyy"));
             }
 
-            plotModel.Series.Add(lineSeries);
-            LinePlotModel = plotModel;
-            plotView.Model = LinePlotModel;
+            Labels = labelsstr;
+            YFormatter = value => $"{value} {Settings.BaseCurrency}";
+
+            // Refresh binding
+            DataContext = null;
+            DataContext = this;
         }
     }
 }

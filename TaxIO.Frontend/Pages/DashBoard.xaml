@@ -6,23 +6,23 @@
       xmlns:local="clr-namespace:TaxIO.Frontend.Pages"
       xmlns:controls="clr-namespace:TaxIO.Frontend.UserControls"
       mc:Ignorable="d" HorizontalAlignment="Left" VerticalAlignment="Center"
-      d:DesignHeight="900" d:DesignWidth="1080"
+      Height="900" Width="1080"
       Title="DashBoard">
     <Grid Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="350"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="650"/>
         </Grid.ColumnDefinitions>
 
-        <controls:PieChart01 x:Name="PieChart01" Width="360" Grid.Column="0" Grid.Row="0"/>
+        <controls:PieChart01 x:Name="PieChart01" Grid.Column="0" Grid.Row="0"/>
 
-        <controls:LineChart01 x:Name="LineChart01" Width="500" Grid.Column="2" Grid.Row="0"/>
+        <controls:LineChart01 x:Name="LineChart01" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="0"/>
 
         <Border Grid.Row="2" Grid.ColumnSpan="3"
             Margin="50,0,50,50"

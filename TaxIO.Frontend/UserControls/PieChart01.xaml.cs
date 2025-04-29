@@ -42,7 +42,7 @@ namespace TaxIO.Frontend.UserControls
             {
                 double sweep = item.Value / total * 360;
 
-                Path path = CreatePieSlice(angle, sweep, 0,  0, 100);
+                Path path = CreatePieSlice(angle, sweep, 0,  0, 175);
                 path.Fill = new SolidColorBrush(Color.FromRgb(
                     (byte)random.Next(100, 256),
                     (byte)random.Next(100, 256),

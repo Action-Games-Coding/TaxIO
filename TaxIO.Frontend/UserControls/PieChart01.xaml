@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxIO.Frontend.UserControls"
-             mc:Ignorable="d" MinHeight="228" MinWidth="228"
-             d:DesignHeight="228" d:DesignWidth="228">
+             mc:Ignorable="d" Height="350" Width="350"
+             d:DesignHeight="350" d:DesignWidth="350">
     <Grid>
         <Canvas x:Name="ChartCanvas" MouseLeave="ChartCanvas_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Border Width="150" Height="150" Background="{DynamicResource BackgroundBrushDark}" CornerRadius="150" 
+        <Border Width="250" Height="250" Background="{DynamicResource BackgroundBrushDark}" CornerRadius="150" 
                 VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock x:Name="LegendTextLine1"
